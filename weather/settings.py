@@ -117,4 +117,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-DISABLE_COLLECTSTATIC=1
+heroku config:set DISABLE_COLLECTSTATIC=1
