@@ -25,7 +25,7 @@ SECRET_KEY = '7w@9f!-xh%i(-^b6$cp^4x%7lzba36z*h52i@09&9wj^5&&#_6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['weather-apo-1.herokuapp.com','127.0.0.1:']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -116,17 +116,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_ROOT = [
-    os.path.join(BASE_DIR,'staticfiles')
-]
 
 STATIC_URL = '/static/'
 
-
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static')
+    os.path.join(BASE_DIR, 'static')
 ]
 
-MEDIA_URL = '/images/'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
